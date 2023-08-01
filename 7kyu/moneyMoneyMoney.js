@@ -26,9 +26,27 @@
 
 // Assumption: Assume that Desired Principal 'D' is always greater than the initial principal. However it is best to take into consideration that if Desired Principal 'D' is equal to Principal 'P' this should return 0 Years.
 
+//Input is numbers
+//Output is also a number
+//while loop with a condition, P < D
+//Y = 0
+//declare totalTax = (P * I) * T
+//P = (P * I) + P - totalTax
+//Y++
+//end of loop
+//return Y
+
+
 
 function calculateYears(principal, interest, tax, desired) {
-  
+    let years = 0
+
+    while (principal < desired){ 
+        let totalTax = (principal * interest) * tax
+        principal = (principal * interest) + principal - totalTax
+        years++
+    }
+    return years
 }
 
 
