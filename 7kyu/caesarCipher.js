@@ -65,7 +65,7 @@ function caesarCode(string, shiftkey){
   return newString
 }
 
-console.log(caesarCode('WEDnesday', -5))
+//console.log(caesarCode('WEDnesday', -5))
 
 //console.log("should test for something", function() {
       // Test.assertEquals(1 + 1, 2);
