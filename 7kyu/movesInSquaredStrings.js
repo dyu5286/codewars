@@ -59,18 +59,19 @@ function vertMirror(strng) {
 // loop thru arr and reverse the order
 
 function horMirror(strng) {
-    let arr = strng.split("\n").reverse().join("\n")
-    return arr
+    return strng.split("\n").reverse().join("\n")
 }
 
 //console.log(horMirror("hSgdHQ\nHnDMao\nClNNxX\niRvxxH\nbqTVvA\nwvSyRu"))
 
 function oper(fct, s) {
-    if (fct === "vertMirror"){
-        vertMirror(s)
-    }else if (fct === "horMirror"){
-        horMirror(s)
-    }
+    return (fct === vertMirror) ? vertMirror(s) : horMirror(s)
+    // if (fct === vertMirror){
+    //     return vertMirror(s)
+    // }else if (fct === horMirror){
+    //     return horMirror(s)
+    // }
+    
 }
 
 
@@ -79,6 +80,6 @@ function oper(fct, s) {
 console.log(oper(vertMirror, "hSgdHQ\nHnDMao\nClNNxX\niRvxxH\nbqTVvA\nwvSyRu"))
 
 // console.log(oper(vertMirror, "hSgdHQ\nHnDMao\nClNNxX\niRvxxH\nbqTVvA\nwvSyRu"))//, "QHdgSh\noaMDnH\nXxNNlC\nHxxvRi\nAvVTqb\nuRySvw");
-// console.log(oper(vertMirror, "IzOTWE\nkkbeCM\nWuzZxM\nvDddJw\njiJyHF\nPVHfSx"))//, "EWTOzI\nMCebkk\nMxZzuW\nwJddDv\nFHyJij\nxSfHVP");
+//console.log(oper(vertMirror, "IzOTWE\nkkbeCM\nWuzZxM\nvDddJw\njiJyHF\nPVHfSx"))//, "EWTOzI\nMCebkk\nMxZzuW\nwJddDv\nFHyJij\nxSfHVP");
 // console.log(oper(horMirror, "lVHt\nJVhv\nCSbg\nyeCt"))//, "yeCt\nCSbg\nJVhv\nlVHt");
 // console.log(oper(horMirror, "njMK\ndbrZ\nLPKo\ncEYz"))//, "cEYz\nLPKo\ndbrZ\nnjMK");
