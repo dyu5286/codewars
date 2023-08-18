@@ -23,10 +23,10 @@
 function alphabetPosition(text) {
     let letters = 'abcdefghijklmnopqrstuvwxyz'
     let outputString = ''
-    text = text.toLowerCase()
+    //text = text.toLowerCase()
     for(let i = 0; i < text.length; i++){
-        if(letters.includes(text[i])){
-            outputString += (letters.indexOf(text[i]) + 1) + " "
+        if(letters.includes(text[i].toLowerCase())){
+            outputString += (letters.indexOf(text[i].toLowerCase()) + 1) + " "
         }
     } 
     return outputString.substring(0, outputString.length -1)
