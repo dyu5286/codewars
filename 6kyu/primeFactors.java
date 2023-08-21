@@ -16,21 +16,25 @@
 
 //Input is a number
 //Output is an array
-//
+//declare outputArr = []
+//let num = 2
+//while loop : while num <= n
+//if n%num === 0, push num to factors
+//n = n / num
+//return factors
 
 function primeFactors(n) {
-    const factors = [];
-    let divisor = 2;
-
-  while (n >= 2) {
-    if (n % divisor == 0) {
-      factors.push(divisor);
-      n = n / divisor;
-    } else {
-      divisor++;
+    let outputArr = []
+    let num = 2
+    while(num > 1 && num <= n){
+        if(n % num === 0){
+            outputArr.push(num)
+            n = n / num
+        }else{
+            num++
+        }
     }
-  }
-  return factors;
+    return outputArr
 }
 
 
