@@ -19,9 +19,9 @@
 //declare outputArr = []
 //let num = 2
 //while loop : while num <= n
-//if n%num === 0, push num to factors
+//if n%num === 0, push num to outputArr
 //n = n / num
-//return factors
+//return outputArr
 
 function primeFactors(n) {
     let outputArr = []
