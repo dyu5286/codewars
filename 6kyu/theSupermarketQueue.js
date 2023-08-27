@@ -33,10 +33,7 @@
 
 //Input is an array and a number
 //Output is a number (math.max)
-//Conditionals for edge cases 
-//if there are no customers
-//if there is just one lane
-//if there are more lanes than customers
+//if there are no customers, return 0
 //Loop that iterates thru the customers array
 //Find the index of the lowest number of newArr 
 //Take the first element of customers and add it to the number of that index
@@ -45,10 +42,6 @@
 function queueTime(customers, n) {
     if(customers.length === 0){
         return 0
-    }else if(n === 1){
-        return customers.reduce((a,c) => a + c, 0)
-    }else if(n >= customers.length){
-        return Math.max(...customers)
     }else{
         let newArr = customers.splice(0, n)
         for(let i = 0; i < customers.length; i++){
