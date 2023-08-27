@@ -33,7 +33,6 @@
 
 //Input is an array and a number
 //Output is a number (math.max)
-//if there are no customers, return 0
 //Loop that iterates thru the customers array
 //Find the index of the lowest number of newArr 
 //Take the first element of customers and add it to the number of that index
