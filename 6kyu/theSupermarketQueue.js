@@ -36,7 +36,7 @@
 //Loop that iterates thru the customers array
 //Find the index of the lowest number of newArr 
 //Take the first element of customers and add it to the number of that index
-
+//return Math.max of newArr
 
 function queueTime(customers, n) {
     if(customers.length === 0){
@@ -44,9 +44,14 @@ function queueTime(customers, n) {
     }else{
         let newArr = customers.splice(0, n)
         for(let i = 0; i < customers.length; i++){
-            newArr.splice(newArr.indexOf(Math.min(...newArr)), 1, Math.min(...newArr) + customers[i])
-        }
-        return Math.max(...newArr)
+            let nextOpenLine = newArr.indexOf(Math.min(...newArr))
+            newArr[nextOpenLine] += customers[i]
+        }  
+        return Math.max(...newArr) 
+        // for(let i = 0; i < customers.length; i++){
+        //     newArr.splice(newArr.indexOf(Math.min(...newArr)), 1, Math.min(...newArr) + customers[i])
+        // }
+        // return Math.max(...newArr)
     }
 }
 
