@@ -28,3 +28,29 @@
 
 // Note for C
 // The two arrays have the same size (> 0) given as parameter in function comp.
+
+//Input is 2 arrays
+//Output is a boolean
+//sort array1 in ascending order
+//map array2 by sqrt and sort 
+//loop that iterates thru array1 and checks the corresding i in array2 to make sure its the same
+//if all elements are same return true
+
+function comp(array1, array2){
+    if(array1 === null || array2 === null){
+        return false
+    }else 
+      array1.sort((a,b) => a - b)
+      array2 = array2.map(x => Math.sqrt(x)).sort((a,b) => a - b)
+      for(let i = 0; i < array1.length; i++){
+        if(array1[i] !== array2[i]){
+            console.log(array1[i], array2[i])
+            return false
+        }
+    }
+    return true
+}
+
+let a1 = [121, 144, 19, 161, 19, 144, 19, 11];
+let a2 = [9, 121*121, 144*144, 19*19, 161*161, 19*19, 144*144, 19*19];
+console.log(comp(a1, a2))
